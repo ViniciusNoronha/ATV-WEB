@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra seu personagem em Star Wars</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    
+    <section id="welcome-screen" class="welcome-screen">
+        <h1 class="main-title">Bem-vindo ao universo de Star Wars</h1>
+        <p class="description">Descubra qual personagem de Star Wars você seria com base em suas escolhas!</p>
+        <button id="start-btn" class="start-button">Iniciar Questionário</button>
+    </section>
+
+    
+    <section id="quiz-screen" class="quiz-screen" style="display: none;">
+        <h2 id="question-title" class="question-title"></h2>
+        <form id="quiz-form" class="quiz-form">
+           
+        </form>
+        <button id="next-btn" class="next-button" disabled>Próxima</button>
+    </section>
+
+   
+    <section id="result-screen" class="result-screen" style="display: none;">
+        <h2 class="result-title">Seu personagem é:</h2>
+        <img id="result-img" class="result-img" alt="Imagem do Personagem">
+        <p id="result-name" class="result-name"></p>
+        <p id="result-description" class="result-description"></p>
+        <p id="result-score" class="result-score"></p>
+        <button id="reset-btn" class="reset-button">Tentar novamente</button>
+    </section>
+
+    <script src="java.js"></script>
+</body>
+</html>

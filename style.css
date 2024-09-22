@@ -1,0 +1,191 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('images/hiperespaco.jpg');
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.screen {
+    margin-top: 50px;
+    padding: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+h1, h2, p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+button {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ffd700;
+}
+
+
+#quiz-form {
+    margin: 20px 0;
+}
+
+
+#quiz-form label {
+    display: flex;
+    align-items: center; 
+    margin: 15px 0;
+    font-size: 1.4em;
+    cursor: pointer;
+    text-align: left;
+    justify-content: flex-start; 
+}
+
+/* Estilo para checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    background-color: #000;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ffcc00;
+    border-color: #fff;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 24 24%22 fill%3D%22white%22%3E%3Cpath d%3D%22M9 16.172l-4.95-4.95L2.636 12.636l6.364 6.364 12-12L18.95 5.636z%22/%3E%3C/svg%3E');
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+#next-btn, #reset-btn {
+    margin-top: 20px;
+    background-color: #333;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+}
+
+/* Resultados */
+img {
+    width: 250px;
+    height: auto;
+    margin-top: 30px;
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.6);
+}
+
+#result-screen h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.screen {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.screen.active {
+    display: block;
+    opacity: 1;
+}
+
+
+h1.main-title {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px 5px #ffcc00;
+}
+
+h2.question-title {
+    font-size: 2em;
+}
+
+p.description {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1533639323736-a8f989b97977?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+
+.result-screen {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.9));
+    padding: 50px;
+}
+
+.result-title {
+    font-size: 2.5em;
+    text-shadow: 3px 3px 5px #000;
+}
+
+.result-name {
+    font-size: 2em;
+    margin-top: 15px;
+}
+
+.result-description, .result-score {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
